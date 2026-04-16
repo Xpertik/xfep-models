@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xfep-models"
+version = "0.1.0"
+description = "Modelos de datos para Facturación Electrónica Perú"
+requires-python = ">=3.13"
+dependencies = ["pydantic>=2.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/xfep"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
