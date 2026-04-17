@@ -6,11 +6,39 @@ build-backend = "hatchling.build"
 name = "xfep-models"
 version = "0.1.0"
 description = "Modelos de datos para Facturación Electrónica Perú"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [
+    {name = "Jhonatan Mosquera Tabra", email = "jhonatanmt83@gmail.com"},
+]
+maintainers = [
+    {name = "Jhonatan Mosquera Tabra", email = "jhonatanmt83@gmail.com"},
+]
+keywords = ["sunat", "facturacion-electronica", "peru", "pydantic", "models", "cpe", "e-invoicing", "ubl"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Topic :: Office/Business :: Financial :: Accounting",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Natural Language :: Spanish",
+    "Operating System :: OS Independent",
+]
 requires-python = ">=3.13"
 dependencies = ["pydantic>=2.0"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "pytest-cov"]
+
+[project.urls]
+Homepage = "https://github.com/Xpertik/xfep-models"
+Repository = "https://github.com/Xpertik/xfep-models"
+Issues = "https://github.com/Xpertik/xfep-models/issues"
+Documentation = "https://github.com/Xpertik/xfep-models#readme"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/xfep"]
